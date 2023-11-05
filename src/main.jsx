@@ -14,6 +14,7 @@ import BidRequests from './components/BidRequests/BidRequests';
 import LogIn from './components/LogIn/LogIn';
 import Register from './components/Register/Register';
 import AuthProvider from './components/AuthProvider/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/add-job",
-        element: <AddJob></AddJob>
+        element: <PrivateRoute><AddJob></AddJob></PrivateRoute>
       },
       {
         path: "/myPostedJobs",
