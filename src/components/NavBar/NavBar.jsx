@@ -63,7 +63,7 @@ const NavBar = () => {
                         <img src={user.photoURL} />
                     </div>
                 </div>
-                <button onClick={handleSignOut} className=" text-white rounded-md px-3 py-1 font-bold border border-pink-800 bg-blue-400">Log Out</button>
+                <button onClick={handleSignOut} className=" text-white rounded-md px-3 py-1 font-bold border border-blue-500 bg-blue-400">Log Out</button>
             </>
                 :
                 ""
