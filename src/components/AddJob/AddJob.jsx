@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import swal from "sweetalert";
 
 const AddJob = () => {
     const { user } = useContext(AuthContext)
@@ -16,6 +17,22 @@ const AddJob = () => {
         const maximumPrice = form.maximumPrice.value;
         const newJob = { image, jobTitle, category, deadline, description, minimumPrice, maximumPrice }
         console.log(newJob);
+
+        fetch('http://localhost:5000/jobs', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newJob)
+
+        })
+         .then(res=> res.json())
+         .then(data =>{
+            console.log(data);
+            if(data.insertedId){
+                swal("Good job!", "Successfully Added a Job", "success")
+            }
+         })
     }
     return (
         <div>
