@@ -1,5 +1,6 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import WebDevelopment from '../WebDevelopment/WebDevelopment';
 const ReactTabs = () => {
     return (
         <div className='w-[1450px] mx-auto'>
@@ -11,8 +12,8 @@ const ReactTabs = () => {
                         <h1 className="border-l-2 border-blue-400"></h1>
                         <Tab className="font-bold text-blue-400">Graphics design</Tab>
                     </TabList>              
-                <TabPanel>
-                    <h2>Any content 1</h2>
+                <TabPanel className='grid grid-cols-3 pt-[50px] h-[600px]'>
+                    <WebDevelopment></WebDevelopment>
                 </TabPanel>
                 <TabPanel>
                     <h2>Any content 2</h2>
