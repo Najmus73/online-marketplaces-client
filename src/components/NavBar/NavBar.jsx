@@ -57,7 +57,11 @@ const NavBar = () => {
         }
         {
             user ? <>
-                <span className="text-blue-400 font-bold uppercase">{user.displayName}</span>
+                <span className="text-blue-400 font-bold uppercase">{
+                   
+                   user.displayName ? <>{user.displayName}</>:<>{user.email}</>
+
+                }</span>
                 <div className="avatar">
                     <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={user.photoURL} />

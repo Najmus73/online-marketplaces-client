@@ -23,7 +23,7 @@ const ReactTabs = () => {
                     </TabPanel>
                     <TabPanel>
                         <GraphicsDesign></GraphicsDesign>
-                    </TabPanel>
+                    </TabPanel>    
                 </div>
             </Tabs>
         </div>

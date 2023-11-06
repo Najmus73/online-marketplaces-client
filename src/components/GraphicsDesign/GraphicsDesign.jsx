@@ -11,10 +11,11 @@ const GraphicsDesign = () => {
     const filter = Jobs.filter(job => job.category == 'Graphics Design')
 
     return (
-        <div>
+        <div className="w-[1450px] mx-auto">
+        <div className='grid grid-cols-3'>
             {
                 filter.map(job =>
-                    <div className="card card-compact w-96 bg-base-100 shadow-xl">
+                    <div className="card card-compact w-[450px] bg-base-100 shadow-xl">
                         <figure><img src={job.image} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">{job.jobTitle}</h2>
@@ -25,6 +26,7 @@ const GraphicsDesign = () => {
                     </div>
                 )
             }
+        </div>
         </div>
     )
 }

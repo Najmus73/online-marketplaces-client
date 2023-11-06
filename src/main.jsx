@@ -31,7 +31,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/myPostedJobs",
-        element: <MyPostedJobs></MyPostedJobs>
+        element: <PrivateRoute><MyPostedJobs></MyPostedJobs></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/jobs')
       },
       {
         path: "/myBids",

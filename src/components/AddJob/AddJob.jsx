@@ -9,13 +9,14 @@ const AddJob = () => {
         e.preventDefault();
         const form = e.target;
         const image = form.image.value;
+        const email = form.email.value;
         const jobTitle = form.jobTitle.value;
         const category = form.category.value;
         const deadline = form.deadline.value;
         const description = form.description.value;
         const minimumPrice = form.minimumPrice.value;
         const maximumPrice = form.maximumPrice.value;
-        const newJob = { image, jobTitle, category, deadline, description, minimumPrice, maximumPrice }
+        const newJob = { image, jobTitle, category, deadline, description, minimumPrice, maximumPrice,email }
         console.log(newJob);
 
         fetch('http://localhost:5000/jobs', {
