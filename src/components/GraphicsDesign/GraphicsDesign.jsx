@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const GraphicsDesign = () => {
     const [Jobs, setJobs] = useState([])
@@ -9,6 +10,7 @@ const GraphicsDesign = () => {
     }, [])
 
     const filter = Jobs.filter(job => job.category == 'Graphics Design')
+    console.log(filter);
 
     return (
         <div className="w-[1450px] mx-auto">
@@ -22,7 +24,9 @@ const GraphicsDesign = () => {
                             <p>{job.description}</p>
                             <h1 className="font-bold">DeadLine : {job.deadline}</h1>
                             <p className="text-lg font-bold text-blue-400">Price Range : ${job.minimumPrice} to ${job.maximumPrice}</p>
+                            <div><Link to={`/Job-detail/${job._id}`}><button className="btn w-full bg-blue-400 hover:bg-blue-500 text-white">Bid now Button</button></Link></div>
                         </div>
+                        
                     </div>
                 )
             }
