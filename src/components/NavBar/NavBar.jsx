@@ -75,7 +75,7 @@ const NavBar = () => {
 
     </>
     return (
-        <div>
+        <div className="bg-pink-900">
             <div className="w-[1450px] mx-auto">
                 <div className="lg:flex justify-between text-center items-center h-24">
                     <div className="text-center">
