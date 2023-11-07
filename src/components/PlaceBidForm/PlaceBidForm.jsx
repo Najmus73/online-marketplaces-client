@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 
 const PlaceBidForm = ({find}) => {
     const {email}=find
     const {user} = useContext(AuthContext);
+    const navigate = useNavigate();
     const handleBid = e =>{
         e.preventDefault();
         const form = e.target;
@@ -12,11 +14,13 @@ const PlaceBidForm = ({find}) => {
         const BidEmail = form.BidEmail.value;
         const email = form.email.value;
         const deadline = form.deadline.value;
+        const title = form.title.value;
         const Bid = {
             price,
             BidEmail,
             buyerEmail:email,
-            deadline
+            deadline,
+            title
         }
         
         fetch('http://localhost:5000/bids', {
@@ -29,9 +33,9 @@ const PlaceBidForm = ({find}) => {
         })
          .then(res=> res.json())
          .then(data =>{
-            console.log(data);
             if(data.insertedId){
                 swal("Good job!", "Successfully Added a Bid", "success")
+                navigate('/myBids');
             }
          })
 
@@ -61,6 +65,10 @@ const PlaceBidForm = ({find}) => {
                             <input className="border px-[44px] border-blue-400 py-[5px] pr-[460px]" type="date" name="deadline" placeholder="Enter Deadline Time" required/>
                         </div>
                     </div>
+                    <div className="flex flex-col">
+                            <label>Job Title</label>
+                            <input className="border px-[44px] border-blue-400 py-[5px] pr-[460px]" type="text" name="title" defaultValue={find.jobTitle} readOnly/>
+                        </div>
                     <div className="pt-[30px]">
                         <input type="submit" value="Click Here To Bid" className="btn btn-block bg-blue-400 font-bold hover:bg-blue-600 text-white"/>
                     </div>
