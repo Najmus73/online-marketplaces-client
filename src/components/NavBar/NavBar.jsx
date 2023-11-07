@@ -22,42 +22,42 @@ const NavBar = () => {
     const navItems = <>
         <NavLink to="/"
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "text-blue-400 border-b-4 border-blue-400 font-bold" : "font-bold text-blue-400"}>HOME
+                isPending ? "pending" : isActive ? "text-white border-b-4 border-white font-bold" : "font-bold text-white"}>HOME
         </NavLink>
         <NavLink to="/add-job"
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "text-blue-400 border-b-4 border-blue-400 font-bold" : "font-bold text-blue-400"}>ADDJOB
+                isPending ? "pending" : isActive ? "text-white border-b-4 border-white font-bold" : "font-bold text-white"}>ADDJOB
         </NavLink>
         <NavLink to="/myPostedJobs"
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "text-blue-400 border-b-4 border-blue-400 font-bold" : "font-bold text-blue-400"}>MYPOSTEDJOB
+                isPending ? "pending" : isActive ? "text-white border-b-4 border-white font-bold" : "font-bold text-white"}>MYPOSTEDJOB
         </NavLink>
         <NavLink to="/myBids"
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "text-blue-400 border-b-4 border-blue-400 font-bold" : "font-bold text-blue-400"}>MYBIDS
+                isPending ? "pending" : isActive ? "text-white border-b-4 border-white font-bold" : "font-bold text-white"}>MYBIDS
         </NavLink>
         <NavLink to="/bidRequests"
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "text-blue-400 border-b-4 border-blue-400 font-bold" : "font-bold text-blue-400"}>BIDREQUESTS
+                isPending ? "pending" : isActive ? "text-white border-b-4 border-white font-bold" : "font-bold text-white"}>BIDREQUESTS
         </NavLink>
         {
             !user && <>
                 <div className="flex gap-[5px]">
                     <NavLink to="/login"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-blue-400 border-b-4 border-blue-400 font-bold" : "font-bold text-blue-400"}>LOGIN
+                            isPending ? "pending" : isActive ? "text-white border-b-4 border-white font-bold" : "font-bold text-white"}>LOGIN
                     </NavLink>
-                    <h1 className="border-l-2 border-blue-400"></h1>
+                    <h1 className="border-l-2 border-white"></h1>
                     <NavLink to="/register"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-blue-400 border-b-4 border-blue-400 font-bold" : "font-bold text-blue-400"}>REGISTER
+                            isPending ? "pending" : isActive ? "text-white border-b-4 border-white font-bold" : "font-bold text-white"}>REGISTER
                     </NavLink>
                 </div>
             </>
         }
         {
             user ? <>
-                <span className="text-blue-400 font-bold uppercase">{
+                <span className="text-white font-bold uppercase">{
                    
                    user.displayName ? <>{user.displayName}</>:<>{user.email}</>
 
@@ -67,7 +67,7 @@ const NavBar = () => {
                         <img src={user.photoURL} />
                     </div>
                 </div>
-                <button onClick={handleSignOut} className=" text-white rounded-md px-3 py-1 font-bold border border-blue-500 bg-blue-400">Log Out</button>
+                <button onClick={handleSignOut} className=" text-white rounded-md px-3 py-1 font-bold border border-white hover:bg-white hover:text-pink-900">Log Out</button>
             </>
                 :
                 ""
@@ -79,7 +79,7 @@ const NavBar = () => {
             <div className="w-[1450px] mx-auto">
                 <div className="lg:flex justify-between text-center items-center h-24">
                     <div className="text-center">
-                        <Link to="/"><h1 className="text-xl font-bold text-blue-400 border-b-4 border-blue-400">True Lancer</h1></Link>
+                        <Link to="/"><h1 className="text-xl font-bold text-white border-b-4 border-white">True Lancer</h1></Link>
                     </div>
                     <div>
                         <ul className="flex gap-5">

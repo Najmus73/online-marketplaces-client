@@ -32,8 +32,8 @@ const BidRequests = () => {
                                         <td className=" font-bold text-lg">{bid.deadline}</td>
                                         <td className=" font-bold text-lg">${bid.price}</td>
                                         <td className="text-yellow-400 font-bold text-lg">Pending</td>
-                                        <td><button className="btn bg-blue-400 text-white hover:bg-blue-600">Accept</button></td>
-                                        <td><button className="btn bg-blue-400 text-white hover:bg-blue-600">Reject</button></td>
+                                        <td><button className="btn bg-pink-900 text-white hover:bg-pink-700">Accept</button></td>
+                                        <td><button className="btn bg-pink-900 text-white hover:bg-pink-700">Reject</button></td>
                                     </tr>
 
                                 )

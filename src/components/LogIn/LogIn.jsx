@@ -38,7 +38,7 @@ const LogIn = () =>{
     return (
         <div className="w-[1450px] mx-auto flex justify-center gap-20 pb-[220px]">
             <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none   pt-10 ">
-                <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-400 antialiased">
+                <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-pink-900 antialiased">
                     Log In
                 </h4>
                 <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
@@ -77,20 +77,20 @@ const LogIn = () =>{
                     
                     </div><br />
 
-                    <input className="border px-[172px] py-[7px] rounded-md bg-blue-400 text-white font-bold" type="submit" value='Login'></input>
+                    <input className="border px-[172px] py-[7px] rounded-md bg-pink-900 text-white font-bold" type="submit" value='Login'></input>
 
                     <p className="mt-4 text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased flex justify-center">
                        Create new account ?
 
                        <Link to='/register'>
-                           <p className="font-medium text-blue-400 transition-colors hover:text-blue-700">Register</p>
+                           <p className="font-medium text-pink-900 transition-colors hover:text-pink-700">Register</p>
                        </Link>
 
                     </p>
                 </form>
             </div>
 
-            <div className="pt-10 flex items-center text-5xl font-bold text-blue-400">OR</div>
+            <div className="pt-10 flex items-center text-5xl font-bold text-pink-900">OR</div>
             <div onClick={handleGoogleLogin} className="pt-10 flex items-center text-3xl font-bold"><div className="flex gap-2 items-center"><FcGoogle></FcGoogle><p> <span className="text-blue-500">G</span><span className="text-red-500">o</span><span className="text-yellow-500">o</span><span className="text-blue-500">g</span><span className="text-green-500">l</span><span className="text-red-500">e</span></p></div></div>
         </div>
     )

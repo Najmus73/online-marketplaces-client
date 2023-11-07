@@ -41,7 +41,7 @@ const Register = () => {
     return (
         <div className="w-[1200px] mx-auto pb-[155px]">
             <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none w-[600px] mx-auto pt-10 pl-[108px]">
-                <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-400 antialiased">
+                <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-pink-900 antialiased">
                     Sign Up
                 </h4>
                 <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
@@ -90,14 +90,14 @@ const Register = () => {
 
                     </div><br />
 
-                    <input className="border px-[163px] py-[7px] rounded-md bg-blue-400 text-white font-bold" type="submit" value='Register'></input>
+                    <input className="border px-[163px] py-[7px] rounded-md bg-pink-900 text-white font-bold" type="submit" value='Register'></input>
 
                     <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
                         Already have an account?
 
                         <Link to='/login'>
                             <a
-                                className="font-medium text-blue-400 transition-colors hover:text-blue-700"
+                                className="font-medium text-pink-900 transition-colors hover:text-blue-700"
                                 href="#"
                             >
                                 Sign In

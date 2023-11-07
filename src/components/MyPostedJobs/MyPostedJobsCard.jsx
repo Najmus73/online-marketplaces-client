@@ -16,8 +16,8 @@ const MyPostedJobsCard = ({ job }) => {
                      <p className="text-lg font-bold">Price Range : ${minimumPrice} to ${maximumPrice}</p>
                 </div>
                 <div className="flex flex-col justify-between p-5">
-                    <button className="btn bg-blue-400 text-white hover:bg-blue-600">Update</button>
-                    <button className="btn bg-blue-400 text-white hover:bg-blue-600">Delete</button>
+                    <button className="btn bg-pink-900 text-white hover:bg-pink-700">Update</button>
+                    <button className="btn bg-pink-900 text-white hover:bg-pink-700">Delete</button>
                 </div>
             </div>
         </div>

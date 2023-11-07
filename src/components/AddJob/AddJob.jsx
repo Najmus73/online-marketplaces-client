@@ -42,17 +42,17 @@ const AddJob = () => {
                     <div className="flex justify-between pb-[10px]">
                         <div className="flex flex-col">
                             <label>Image</label>
-                            <input className="border border-blue-400 py-[5px] pr-[460px]" type="text" name="image" placeholder="Enter Image Url" />
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="image" placeholder="Enter Image Url" />
                         </div>
                         <div className="flex flex-col">
                             <label>Job Title</label>
-                            <input className="border border-blue-400 py-[5px] pr-[460px]" type="text" name="jobTitle" placeholder="Enter Job Title" />
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="jobTitle" placeholder="Enter Job Title" />
                         </div>
                     </div>
                     <div className="flex justify-between pb-[10px]">
                         <div className="flex flex-col">
                             <label>Category</label>
-                            <input list='data' className="border border-blue-400 py-[5px] pr-[460px]" type="text" name="category" placeholder="Enter Category" />
+                            <input list='data' className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="category" placeholder="Enter Category" />
                             <datalist id='data'>
                                 <option>Web Development</option>
                                 <option>Digital Marketing</option>
@@ -61,32 +61,32 @@ const AddJob = () => {
                         </div>
                         <div className="flex flex-col">
                             <label>Deadline</label>
-                            <input className="border px-[44px] border-blue-400 py-[5px] pr-[460px]" type="date" name="deadline" placeholder="Enter Deadline Time" />
+                            <input className="border px-[44px] border-pink-900 py-[5px] pr-[460px]" type="date" name="deadline" placeholder="Enter Deadline Time" />
                         </div>
                     </div>
                     <div className="flex justify-between pb-[10px]">
                         <div className="flex flex-col">
                             <label>Description</label>
-                            <input className="border border-blue-400 py-[5px] pr-[460px]" type="text" name="description" placeholder="Enter Job Description" />
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="description" placeholder="Enter Job Description" />
                         </div>
                         <div className="flex flex-col">
                             <label>Email</label>
-                            <input className="border border-blue-400 py-[5px] pr-[460px]" type="email" name="email" defaultValue={email} readOnly/>
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="email" name="email" defaultValue={email} readOnly/>
                         </div>         
                     </div>
                     <div className="flex justify-between pb-[10px]">
                         <div className="flex flex-col">
                             <label>Maximum Price</label>
-                            <input className="border border-blue-400 py-[5px] pr-[460px]" type="text" name="maximumPrice" placeholder="Enter Maximum Price" />
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="maximumPrice" placeholder="Enter Maximum Price" />
                         </div>
                         <div className="flex flex-col">
                             <label>Minimum Price</label>
-                            <input className="border border-blue-400 py-[5px] pr-[460px]" type="text" name="minimumPrice" placeholder="Enter Minimum Price" />
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="minimumPrice" placeholder="Enter Minimum Price" />
                         </div>
                     </div>
 
                     <div className="pt-[30px]">
-                        <input type="submit" value="Add Job" className="btn btn-block bg-blue-400 font-bold text-white" />
+                        <input type="submit" value="Add Job" className="btn btn-block bg-pink-900 font-bold text-white" />
                     </div>
                 </form>
 

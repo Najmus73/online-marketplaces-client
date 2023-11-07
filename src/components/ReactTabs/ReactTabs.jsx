@@ -7,12 +7,12 @@ const ReactTabs = () => {
     return (
         <div className='w-[1450px] mx-auto'>
             <Tabs>
-                <TabList className="border-[2px] border-blue-400 flex justify-between gap-[50px] px-[200px] py-[8px] rounded-lg">
-                    <Tab className="font-bold text-blue-400">Web development</Tab>
-                    <h1 className="border-l-2 border-blue-400"></h1>
-                    <Tab className="font-bold text-blue-400">Digital marketing</Tab>
-                    <h1 className="border-l-2 border-blue-400"></h1>
-                    <Tab className="font-bold text-blue-400">Graphics design</Tab>
+                <TabList className="border-[2px] border-pink-900 flex justify-between gap-[50px] px-[200px] py-[8px] rounded-lg">
+                    <Tab className="font-bold text-pink-900">Web development</Tab>
+                    <h1 className="border-l-2 border-pink-900"></h1>
+                    <Tab className="font-bold text-pink-900">Digital marketing</Tab>
+                    <h1 className="border-l-2 border-pink-900"></h1>
+                    <Tab className="font-bold text-pink-900">Graphics design</Tab>
                 </TabList>
                 <div className='py-[50px]'>
                     <TabPanel className='grid grid-cols-3'>

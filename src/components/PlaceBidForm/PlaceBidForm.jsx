@@ -47,30 +47,30 @@ const PlaceBidForm = ({find}) => {
                     <div className="flex justify-between pb-[10px]">
                         <div className="flex flex-col">
                             <label>Price</label>
-                            <input className="border border-blue-400 py-[5px] pr-[460px]" type="text" name="price" placeholder="Your bidding amount" />
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="price" placeholder="Your bidding amount" />
                         </div>
                         <div className="flex flex-col">
                             <label>Bider Email</label>
-                            <input className="border border-blue-400 py-[5px] pr-[460px]" type="text" name="BidEmail" defaultValue={user.email}  readOnly/>
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="BidEmail" defaultValue={user.email}  readOnly/>
                         </div>
                     </div>
                     <div className="flex justify-between pb-[10px]">
                         <div className="flex flex-col">
                             <label>Buyer Email</label>
-                            <input className="border border-blue-400 py-[5px] pr-[460px]" type="text" name="email" defaultValue={email} readOnly/>
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="email" defaultValue={email} readOnly/>
                            
                         </div>
                         <div className="flex flex-col">
                             <label>Deadline</label>
-                            <input className="border px-[44px] border-blue-400 py-[5px] pr-[460px]" type="date" name="deadline" placeholder="Enter Deadline Time" required/>
+                            <input className="border px-[44px] border-pink-900 py-[5px] pr-[460px]" type="date" name="deadline" placeholder="Enter Deadline Time" required/>
                         </div>
                     </div>
                     <div className="flex flex-col">
                             <label>Job Title</label>
-                            <input className="border px-[44px] border-blue-400 py-[5px] pr-[460px]" type="text" name="title" defaultValue={find.jobTitle} readOnly/>
+                            <input className="border px-[44px] border-pink-900 py-[5px] pr-[460px]" type="text" name="title" defaultValue={find.jobTitle} readOnly/>
                         </div>
                     <div className="pt-[30px]">
-                        <input type="submit" value="Click Here To Bid" className="btn btn-block bg-blue-400 font-bold hover:bg-blue-600 text-white"/>
+                        <input type="submit" value="Click Here To Bid" className="btn btn-block bg-pink-900 font-bold hover:bg-blue-600 text-white"/>
                     </div>
                 </form>
 

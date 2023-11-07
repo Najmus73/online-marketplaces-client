@@ -21,25 +21,25 @@ const JobDetail = () => {
                 </div>
 
                 <div className="w-[600px] pt-[51px]">
-                    <Tabs className='border-2 border-blue-400 h-[500px] rounded-lg'>
-                        <TabList className='flex justify-between  border-[2px] border-blue-400 px-[50px] rounded-lg py-[8px]'>
-                            <Tab className="font-bold text-blue-400">Basic</Tab>
-                            <h1 className="border-l-2 border-blue-400"></h1>
-                            <Tab className="font-bold text-blue-400">Standard</Tab>
+                    <Tabs className='border-2 border-pink-900 h-[500px] rounded-lg'>
+                        <TabList className='flex justify-between  border-[2px] border-pink-900 px-[50px] rounded-lg py-[8px]'>
+                            <Tab className="font-bold text-pink-900">Basic</Tab>
+                            <h1 className="border-l-2 border-pink-900"></h1>
+                            <Tab className="font-bold text-pink-900">Standard</Tab>
                         </TabList>
 
                         <TabPanel>
                             <div className="p-[50px]">
                                 <h1 className="text-2xl font-bold">Basic Price Range : ${find.minimumPrice}</h1>
                                 <h1 className="text-2xl font-bold py-[30px]">Deadline : {find.deadline}</h1>
-                                <div className="pt-[200px]"><button className="btn bg-blue-400 text-white hover:bg-blue-500 w-full">Contact Me</button></div>
+                                <div className="pt-[200px]"><button className="btn bg-pink-900 text-white hover:bg-pink-700 w-full">Contact Me</button></div>
                             </div>
                         </TabPanel>
                         <TabPanel>
                             <div className="p-[50px]">
                                 <h1 className="text-2xl font-bold">Standard Price Range : ${find.maximumPrice}</h1>
                                 <h1 className="text-2xl font-bold py-[30px]">Deadline : {find.deadline}</h1>
-                                <div className="pt-[200px]"><button className="btn bg-blue-400 text-white hover:bg-blue-500 w-full">Contact Me</button></div>
+                                <div className="pt-[200px]"><button className="btn bg-pink-900 text-white hover:bg-pink-700 w-full">Contact Me</button></div>
                             </div>
                         </TabPanel>
                     </Tabs>
