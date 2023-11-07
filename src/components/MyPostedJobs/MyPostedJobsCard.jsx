@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
+
 const MyPostedJobsCard = ({ job }) => {
-    const {image,jobTitle,category,deadline,description,minimumPrice,maximumPrice,email} =job
+    const {image,jobTitle,category,deadline,description,minimumPrice,maximumPrice,email,_id} =job
+    console.log(_id);
     return (
         <div className="pb-[25px] ">
             <div className="flex justify-between bg-base-100 shadow-xl">
@@ -16,7 +19,7 @@ const MyPostedJobsCard = ({ job }) => {
                      <p className="text-lg font-bold">Price Range : ${minimumPrice} to ${maximumPrice}</p>
                 </div>
                 <div className="flex flex-col justify-between p-5">
-                    <button className="btn bg-pink-900 text-white hover:bg-pink-700">Update</button>
+                    <Link to={`/update/${job._id}`}><button className="btn bg-pink-900 text-white hover:bg-pink-700">Update</button></Link>
                     <button className="btn bg-pink-900 text-white hover:bg-pink-700">Delete</button>
                 </div>
             </div>
