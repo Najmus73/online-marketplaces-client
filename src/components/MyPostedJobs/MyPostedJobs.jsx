@@ -8,7 +8,7 @@ const MyPostedJobs = () =>{
     const { user } = useContext(AuthContext);
     const filter = AllJobs.filter(job=>job.email == user.email)
     return (
-        <div className="w-[1450px] mx-auto">
+        <div className="w-[1450px] mx-auto py-[50px]">
            {
             filter.map(job=><MyPostedJobsCard key={job._id} job={job}></MyPostedJobsCard>)
            }
