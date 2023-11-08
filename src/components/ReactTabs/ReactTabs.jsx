@@ -15,7 +15,7 @@ const ReactTabs = () => {
                     <Tab className="font-bold text-pink-900">Graphics design</Tab>
                 </TabList>
                 <div className='py-[50px]'>
-                    <TabPanel className='grid grid-cols-3'>
+                    <TabPanel>
                         <WebDevelopment></WebDevelopment>
                     </TabPanel>
                     <TabPanel>

@@ -40,6 +40,7 @@ const Update = () => {
     }
     return (
         <div>
+            <h1 className="py-[50px] font-bold text-2xl text-pink-900 text-center">Job Update By Fill Up This Form</h1>
             <div className="h-[500px] w-[1350px] mx-auto pt-[50px]">
                 <form onSubmit={handleUpdateJob}>
                     <div className="flex justify-between pb-[10px]">
@@ -89,7 +90,7 @@ const Update = () => {
                     </div>
 
                     <div className="pt-[30px]">
-                        <input type="submit" value="Add Job" className="btn btn-block bg-pink-900 font-bold text-white" />
+                        <input type="submit" value="Update Job" className="btn btn-block bg-pink-900 font-bold text-white" />
                     </div>
                 </form>
 

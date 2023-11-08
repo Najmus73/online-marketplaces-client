@@ -13,20 +13,24 @@ const WebDevelopment = () => {
 
     return (
         <div>
-            {
-                filter.map(job =>
-                    <div className="card card-compact w-96 bg-base-100 shadow-xl hover:shadow-2xl hover:shadow-pink-900">
-                        <figure><img src={job.image} alt="Shoes" /></figure>
-                        <div className="card-body">
-                            <h2 className="card-title">{job.jobTitle}</h2>
-                            <p>{job.description}</p>
-                            <h1 className="font-bold">DeadLine : {job.deadline}</h1>
-                            <p className="text-lg font-bold text-pink-900">Price Range : ${job.minimumPrice} to ${job.maximumPrice}</p>
-                            <div><Link to={`/Job-detail/${job._id}`}><button className="btn w-full bg-pink-900 hover:bg-pink-700 text-white">Bid now Button</button></Link></div>
+            <div className="pb-[50px] flex justify-center"><h1 className="text-2xl font-bold items-center text-pink-900 border-b-4 border-pink-900 w-[220px] shadow-2xl shadow-pink-900 ">Web Development</h1></div>
+             
+            <div className="grid grid-cols-4 gap-[16px]">
+                {
+                    filter.map(job =>
+                        <div className="card card-compact w-[350px] h-[580px] bg-base-100 shadow-xl hover:shadow-2xl hover:shadow-pink-900">
+                            <figure><img className="w-[350px] h-[220px]" src={job.image} alt="Shoes" /></figure>
+                            <div className="card-body">
+                                <h2 className="card-title">{job.jobTitle}</h2>
+                                <p>{job.description}</p>
+                                <h1 className="font-bold">DeadLine : {job.deadline}</h1>
+                                <p className="text-lg font-bold text-pink-900">Price Range : ${job.minimumPrice} to ${job.maximumPrice}</p>
+                                <div><Link to={`/Job-detail/${job._id}`}><button className="btn w-full bg-pink-900 hover:bg-pink-700 text-white">Bid now Button</button></Link></div>
+                            </div>
                         </div>
-                    </div>
-                )
-            }
+                    )
+                }
+            </div>
         </div>
     )
 }

@@ -9,7 +9,7 @@ const MyBids = () => {
     const filterBid = AllBids.filter(bid => bid.BidEmail == user.email)
 
     return (
-        <div className="w-[1450px] mx-auto py-[50px] pb-[500px]">
+        <div className="w-[1450px] mx-auto py-[50px] pb-[550px] ">
             <div className="overflow-x-auto">
                 <table className="table table-xs">
                     <thead>

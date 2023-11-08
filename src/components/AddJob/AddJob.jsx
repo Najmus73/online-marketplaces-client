@@ -37,6 +37,7 @@ const AddJob = () => {
     }
     return (
         <div>
+            <h1 className="py-[50px] font-bold text-2xl text-pink-900 text-center">Job Posting By Fill Up This Form</h1>
             <div className="h-[500px] w-[1350px] mx-auto pt-[50px]">
                 <form onSubmit={handleAddJob}>
                     <div className="flex justify-between pb-[10px]">
