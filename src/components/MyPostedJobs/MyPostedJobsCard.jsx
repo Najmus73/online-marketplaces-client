@@ -1,8 +1,13 @@
+import { reload } from "firebase/auth";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const MyPostedJobsCard = ({ job }) => {
     const { image, jobTitle, category, deadline, description, minimumPrice, maximumPrice, email, _id } = job
+
+    function refreshPage() {
+        window.location.reload(false);
+      }
 
     const handleDelete = _id => {
         console.log(_id);
@@ -29,8 +34,9 @@ const MyPostedJobsCard = ({ job }) => {
                                 title: "Deleted!",
                                 text: "Your Job has been deleted.",
                                 icon: "success"
-                              });
+                              });                             
                         }
+                        refreshPage();                      
                     })
             }
         });
@@ -38,7 +44,7 @@ const MyPostedJobsCard = ({ job }) => {
 
     return (
         <div className="pb-[25px] ">
-            <div className="flex justify-between bg-base-100 shadow-xl">
+            <div className="flex justify-between bg-base-100 shadow-xl hover:shadow-2xl hover:shadow-pink-900">
                 <div>
                     <figure><img className="w-[400px] h-[270px]" src={image} alt="Album" /></figure>
                 </div>

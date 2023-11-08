@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDw5bKFl5J7lKfqbkhKiCaFNktms6BQh9Q",
-  authDomain: "online-marketplaces-auth.firebaseapp.com",
-  projectId: "online-marketplaces-auth",
-  storageBucket: "online-marketplaces-auth.appspot.com",
-  messagingSenderId: "467147305036",
-  appId: "1:467147305036:web:45b8efa43b1b295c7c04e9"
+  apiKey:import.meta.env.VITE_apiKey,
+  authDomain:import.meta.env.VITE_authDomain,
+  projectId:import.meta.env.VITE_projectId,
+  storageBucket:import.meta.env.VITE_storageBucket,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId,
+  appId:import.meta.env.VITE_appId
 };
 
 // Initialize Firebase

@@ -10,6 +10,7 @@ const BidRequests = () => {
     return (
         <div>
             <div className="w-[1450px] mx-auto py-[50px] pb-[550px]">
+            <h1 className="pb-[50px]  font-bold text-2xl text-pink-900 text-center">Your Jobs That People Bids</h1>
                 <div className="overflow-x-auto">
                     <table className="table table-xs">
                         <thead>

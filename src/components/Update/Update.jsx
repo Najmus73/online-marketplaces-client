@@ -5,9 +5,9 @@ import { useLoaderData } from "react-router-dom";
 
 const Update = () => {
     const { user } = useContext(AuthContext)
-    const {email} = user;
-    const allJobs =useLoaderData();
-    const {image, jobTitle, category, deadline, description, minimumPrice, maximumPrice, _id }= allJobs;
+    const { email } = user;
+    const allJobs = useLoaderData();
+    const { image, jobTitle, category, deadline, description, minimumPrice, maximumPrice, _id } = allJobs;
     const handleUpdateJob = e => {
         e.preventDefault();
         const form = e.target;
@@ -20,7 +20,7 @@ const Update = () => {
         const minimumPrice = form.minimumPrice.value;
         const maximumPrice = form.maximumPrice.value;
         const updateJob = { image, jobTitle, category, deadline, description, minimumPrice, maximumPrice, email }
-       
+
 
         fetch(`http://localhost:5000/jobs/${_id}`, {
             method: 'PUT',
@@ -33,7 +33,7 @@ const Update = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if (data.modifiedCount>0) {
+                if (data.modifiedCount > 0) {
                     swal("Good job!", "Successfully Added a Job", "success")
                 }
             })
@@ -46,17 +46,17 @@ const Update = () => {
                     <div className="flex justify-between pb-[10px]">
                         <div className="flex flex-col">
                             <label>Image</label>
-                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="image" defaultValue={image} />
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="image" defaultValue={image} required />
                         </div>
                         <div className="flex flex-col">
                             <label>Job Title</label>
-                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="jobTitle" defaultValue={jobTitle} />
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="jobTitle" defaultValue={jobTitle} required />
                         </div>
                     </div>
                     <div className="flex justify-between pb-[10px]">
                         <div className="flex flex-col">
                             <label>Category</label>
-                            <input list='data' className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="category" defaultValue={category} />
+                            <input list='data' className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="category" defaultValue={category} required />
                             <datalist id='data'>
                                 <option>Web Development</option>
                                 <option>Digital Marketing</option>
@@ -65,27 +65,27 @@ const Update = () => {
                         </div>
                         <div className="flex flex-col">
                             <label>Deadline</label>
-                            <input className="border px-[44px] border-pink-900 py-[5px] pr-[460px]" type="date" name="deadline" defaultValue={deadline} />
+                            <input className="border px-[44px] border-pink-900 py-[5px] pr-[460px]" type="date" name="deadline" defaultValue={deadline} required />
                         </div>
                     </div>
                     <div className="flex justify-between pb-[10px]">
                         <div className="flex flex-col">
                             <label>Description</label>
-                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="description" defaultValue={description} />
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="description" defaultValue={description} required />
                         </div>
                         <div className="flex flex-col">
                             <label>Email</label>
-                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="email" name="email" defaultValue={email} readOnly />
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="email" name="email" defaultValue={email} readOnly required />
                         </div>
                     </div>
                     <div className="flex justify-between pb-[10px]">
                         <div className="flex flex-col">
                             <label>Maximum Price</label>
-                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="maximumPrice" defaultValue={maximumPrice} />
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="number" name="maximumPrice" defaultValue={maximumPrice} required />
                         </div>
                         <div className="flex flex-col">
                             <label>Minimum Price</label>
-                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="text" name="minimumPrice" defaultValue={minimumPrice} />
+                            <input className="border border-pink-900 py-[5px] pr-[460px]" type="number" name="minimumPrice" defaultValue={minimumPrice} required />
                         </div>
                     </div>
 
