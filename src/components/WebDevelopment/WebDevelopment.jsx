@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const WebDevelopment = () => {
     const [Jobs, setJobs] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/jobs')
+        fetch('https://online-marketplaces-server-site-lzf582omn.vercel.app/jobs')
             .then(res => res.json())
             .then(data => setJobs(data))
     }, [])
@@ -15,7 +15,7 @@ const WebDevelopment = () => {
         <div>
             <div className="pb-[50px] flex justify-center"><h1 className="text-2xl font-bold items-center text-pink-900 border-b-4 border-pink-900 w-[220px] shadow-2xl shadow-pink-900 ">Web Development</h1></div>
              
-            <div className="grid grid-cols-4 gap-[16px]">
+            <div className="grid grid-cols-1 lg:grid lg:grid-cols-4 gap-[16px]" id="web">
                 {
                     filter.map(job =>
                         <div className="card card-compact w-[350px] h-[580px] bg-base-100 shadow-xl hover:shadow-2xl hover:shadow-pink-900">

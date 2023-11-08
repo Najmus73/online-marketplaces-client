@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import swal from "sweetalert";
+import { Helmet } from "react-helmet";
 const Register = () => {
 
     const { registerUser, logOut } = useContext(AuthContext);
@@ -40,6 +41,11 @@ const Register = () => {
 
     return (
         <div className="w-[1200px] mx-auto pb-[155px]">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>True | Register</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none w-[600px] mx-auto pt-10 pl-[108px]">
                 <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-pink-900 antialiased">
                     Sign Up

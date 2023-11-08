@@ -2,14 +2,16 @@ import Banner from "../Banner/Banner";
 import ReactTabs from "../ReactTabs/ReactTabs";
 import OurServiceSystem from "./OurServiceSystem";
 import SearchBox from "./SearchBox";
+import WhyChooseUs from "./WhyChooseUs";
 
 const Home = () =>{
     return(
-        <div>
+        <div id="home">
             <Banner></Banner>
             <SearchBox></SearchBox>
-            <ReactTabs></ReactTabs>
             <OurServiceSystem></OurServiceSystem>
+            <ReactTabs></ReactTabs>
+            <WhyChooseUs></WhyChooseUs>
         </div>
     )
 }

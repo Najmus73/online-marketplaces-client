@@ -23,7 +23,7 @@ const MyPostedJobsCard = ({ job }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/jobs/${_id}`,{
+                fetch(`https://online-marketplaces-server-site-lzf582omn.vercel.app/jobs/${_id}`,{
                     method: 'DELETE'
                 })
                     .then(res => res.json())

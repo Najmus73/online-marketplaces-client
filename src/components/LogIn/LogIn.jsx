@@ -3,6 +3,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import swal from "sweetalert";
+import { Helmet } from "react-helmet";
 const LogIn = () =>{
     const { LogInUser,LogInWithGoogle } = useContext(AuthContext)
     const navigate = useNavigate();
@@ -37,6 +38,11 @@ const LogIn = () =>{
  
     return (
         <div className="w-[1450px] mx-auto flex justify-center gap-20 pb-[220px]">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>True | LogIn</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none   pt-10 ">
                 <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-pink-900 antialiased">
                     Log In

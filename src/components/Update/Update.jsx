@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import swal from "sweetalert";
 import { useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Update = () => {
     const { user } = useContext(AuthContext)
@@ -22,7 +23,7 @@ const Update = () => {
         const updateJob = { image, jobTitle, category, deadline, description, minimumPrice, maximumPrice, email }
 
 
-        fetch(`http://localhost:5000/jobs/${_id}`, {
+        fetch(`https://online-marketplaces-server-site-lzf582omn.vercel.app/jobs/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -40,6 +41,11 @@ const Update = () => {
     }
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>True | Update</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <h1 className="py-[50px] font-bold text-2xl text-pink-900 text-center">Job Update By Fill Up This Form</h1>
             <div className="h-[500px] w-[1350px] mx-auto pt-[50px]">
                 <form onSubmit={handleUpdateJob}>

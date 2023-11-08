@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import PlaceBidForm from "../PlaceBidForm/PlaceBidForm";
+import { Helmet } from "react-helmet";
 
 const JobDetail = () => {
     const allJobs = useLoaderData();
@@ -12,6 +13,11 @@ const JobDetail = () => {
 
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>True | JobDetails</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <div className="w-[1450px] mx-auto pt-[50px] flex gap-[150px]">
                 <div className="pb-[100px] w-[700px]">
                     <h1 className="text-2xl font-bold">{find.jobTitle}</h1>

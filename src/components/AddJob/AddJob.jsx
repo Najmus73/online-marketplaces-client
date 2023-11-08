@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const AddJob = () => {
     const { user } = useContext(AuthContext)
@@ -21,7 +22,7 @@ const AddJob = () => {
         const newJob = { image, jobTitle, category, deadline, description, minimumPrice, maximumPrice,email }
         console.log(newJob);
 
-        fetch('http://localhost:5000/jobs', {
+        fetch('https://online-marketplaces-server-site-lzf582omn.vercel.app/jobs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -40,6 +41,11 @@ const AddJob = () => {
     }
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>True | AddJob</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <h1 className="py-[50px] font-bold text-2xl text-pink-900 text-center">Job Posting By Fill Up This Form</h1>
             <div className="h-[500px] w-[1350px] mx-auto pt-[50px]">
                 <form onSubmit={handleAddJob}>

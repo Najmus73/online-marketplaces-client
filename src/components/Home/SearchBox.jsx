@@ -1,6 +1,7 @@
+import '../Styles/Styles.css'
 const SearchBox = () => {
     return (
-        <div className="pb-[100px]">
+        <div className="pb-[100px]" id='search'>
         <div className="w-[1087px] mx-auto h-[134px] shadow-2xl shadow-pink-900 mt-[-67px] bg-white rounded-lg">
             <div className="flex justify-center gap-5 py-[45px]">
                 <div>
