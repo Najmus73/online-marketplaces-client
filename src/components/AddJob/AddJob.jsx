@@ -22,7 +22,7 @@ const AddJob = () => {
         const newJob = { image, jobTitle, category, deadline, description, minimumPrice, maximumPrice,email }
         console.log(newJob);
 
-        fetch('https://online-marketplaces-server-site-lzf582omn.vercel.app/jobs', {
+        fetch('https://online-marketplaces-server-site-iota.vercel.app/jobs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

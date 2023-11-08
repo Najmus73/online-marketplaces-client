@@ -36,17 +36,17 @@ const router = createBrowserRouter([
       {
         path: "/myPostedJobs",
         element: <PrivateRoute><MyPostedJobs></MyPostedJobs></PrivateRoute>,
-        loader: () => fetch('https://online-marketplaces-server-site-lzf582omn.vercel.app/jobs')
+        loader: () => fetch('https://online-marketplaces-server-site-iota.vercel.app/jobs')
       },
       {
         path: "/myBids",
         element: <PrivateRoute><MyBids></MyBids></PrivateRoute>,
-        loader: () => fetch('https://online-marketplaces-server-site-lzf582omn.vercel.app/bids')
+        loader: () => fetch('https://online-marketplaces-server-site-iota.vercel.app/bids')
       },
       {
         path: "/bidRequests",
         element: <PrivateRoute><BidRequests></BidRequests></PrivateRoute>,
-        loader: () => fetch('https://online-marketplaces-server-site-lzf582omn.vercel.app/bids')
+        loader: () => fetch('https://online-marketplaces-server-site-iota.vercel.app/bids')
       },
       {
         path: "/login",
@@ -59,12 +59,12 @@ const router = createBrowserRouter([
       {
         path: "/Job-detail/:_id",
         element: <PrivateRoute><JobDetail></JobDetail></PrivateRoute>,
-        loader: () => fetch('https://online-marketplaces-server-site-lzf582omn.vercel.app/jobs')
+        loader: () => fetch('https://online-marketplaces-server-site-iota.vercel.app/jobs')
       },
       {
         path: "/update/:_id",
         element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({params}) => fetch(`https://online-marketplaces-server-site-lzf582omn.vercel.app/jobs/${params._id}`)
+        loader: ({params}) => fetch(`https://online-marketplaces-server-site-iota.vercel.app/jobs/${params._id}`)
       }
     ]
   },

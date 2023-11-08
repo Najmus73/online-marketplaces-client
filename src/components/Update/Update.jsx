@@ -23,7 +23,7 @@ const Update = () => {
         const updateJob = { image, jobTitle, category, deadline, description, minimumPrice, maximumPrice, email }
 
 
-        fetch(`https://online-marketplaces-server-site-lzf582omn.vercel.app/jobs/${_id}`, {
+        fetch(`https://online-marketplaces-server-site-iota.vercel.app/jobs/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

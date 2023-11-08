@@ -32,7 +32,7 @@ const PlaceBidForm = ({ find }) => {
                 footer: '<a href="#">Why do I have this issue?</a>'
             }); 
         }else{
-            fetch('https://online-marketplaces-server-site-lzf582omn.vercel.app/bids', {
+            fetch('https://online-marketplaces-server-site-iota.vercel.app/bids', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

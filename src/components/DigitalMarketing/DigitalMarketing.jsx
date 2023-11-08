@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const DigitalMarketing = () => {
     const [Jobs, setJobs] = useState([])
     useEffect(() => {
-        fetch('https://online-marketplaces-server-site-lzf582omn.vercel.app/jobs')
+        fetch('https://online-marketplaces-server-site-iota.vercel.app/jobs')
             .then(res => res.json())
             .then(data => setJobs(data))
     }, [])
