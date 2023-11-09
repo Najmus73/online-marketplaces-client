@@ -8,7 +8,7 @@ const MyBids = () => {
     const AllBids = useLoaderData();
     const { user } = useContext(AuthContext);
     const filterBid = AllBids.filter(bid => bid.BidEmail == user.email)
-  
+ 
 
     return (
         <div className="w-[1450px] mx-auto py-[50px] pb-[550px] ">

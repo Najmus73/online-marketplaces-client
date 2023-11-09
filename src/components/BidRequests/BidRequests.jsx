@@ -3,20 +3,14 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
+import BidRequestsInfo from "./BidRequestsInfo";
 
 const BidRequests = () => {
     const AllBids = useLoaderData();
     const { user } = useContext(AuthContext);
     const filterBid = AllBids.filter(bid => bid.buyerEmail == user.email)
-    const [request,setRequest]=useState();
-    const [reject,setReject]=useState();
-    
-      const handleAcceptReject = () =>{
-       return setRequest('Accepted')
-    }
-      const handleReject = () =>{
-       return setReject('Rejected')
-    }
+   
+   
     return (
         <div>
             <Helmet>
@@ -41,18 +35,7 @@ const BidRequests = () => {
                         <tbody>
 
                             {
-                                filterBid.map(bid =>
-                                    <tr>
-                                        <td className="font-bold text-lg">{bid.title}</td>
-                                        <td className="font-bold text-lg">{bid.BidEmail}</td>
-                                        <td className=" font-bold text-lg">{bid.deadline}</td>
-                                        <td className=" font-bold text-lg">${bid.price}</td>
-                                        <td className="text-yellow-400 font-bold text-lg">{request ? request:'Pending'}</td>
-                                        <td><button onClick={handleAcceptReject} className={`btn bg-pink-900 text-white hover:bg-pink-700`}>Accept</button></td>
-                                        <td><button onClick={handleReject} className="btn bg-pink-900 text-white hover:bg-pink-700">Reject</button></td>
-                                    </tr>
-
-                                )
+                                filterBid.map(bid =><BidRequestsInfo key={bid._id} bid={bid}></BidRequestsInfo>)
                             }
                         </tbody>
                     </table>
